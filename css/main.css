@@ -13,6 +13,15 @@
 	--transition: .75s cubic-bezier(.075, .5, 0, 1);
 }
 
+
+body {
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
 @font-face {
 	font-family: raleway_c;
 	src: url(../fonts/raleway-v22-cyrillic-100.woff2);
@@ -67,6 +76,8 @@ h3,
 h4 {
 	font-weight: 100;
 	text-transform: uppercase;
+	width: min-content;
+	line-height: 1;
 }
 
 .frame h2 {
@@ -92,4 +103,36 @@ h4 {
 
 .frame_bg {
 	background-color: rgb(0 0 0 / .87);
+}
+
+.text-right {
+	position: relative;
+	left: 18vw;
+}
+
+.text-left {
+	position: relative;
+	right: 18vw;
+}
+
+.frame h3 {
+	font-size: calc(var(--index) * 3);
+}
+
+.frame p {
+	max-width: 30vw;
+	margin-top: 3vh;
+}
+
+.soundbutton {
+	position: fixed;
+	bottom: 5vh;
+	right: 5vh;
+	cursor: pointer;
+	width: 24px;
+	transform: .25s ease;
+}
+
+.soundbutton paused {
+	opacity: .25;
 }
